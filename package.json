@@ -1,0 +1,94 @@
+{
+  "_args": [
+    [
+      "@zz-app/react-native-cli",
+      ""
+    ],
+    [
+      "@zz-app/react-native-cli",
+      ""
+    ],
+    [
+      "@zz-app/react-native-cli",
+      ""
+    ],
+    [
+      "@zz-app/react-native-cli",
+      ""
+    ],
+    [
+      "@zz-app/react-native-cli",
+      ""
+    ],
+    [
+      "@zz-app/react-native-cli",
+      ""
+    ]
+  ],
+  "_cnpm_publish_time": 1503644464931,
+  "_from": "@zz-app/react-native-cli@latest",
+  "_id": "@zz-app/react-native-cli@2.0.11",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@zz-app/react-native-cli",
+  "_nodeVersion": "4.4.4",
+  "_npmUser": {
+    "email": "lishoulong@58ganji.com",
+    "name": "lishoulong"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_publish_on_cnpm": true,
+  "_requested": {
+    "name": "@zz-app/react-native-cli",
+    "raw": "@zz-app/react-native-cli",
+    "rawSpec": "",
+    "scope": "@zz-app",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_shrinkwrap": null,
+  "_spec": "@zz-app/react-native-cli",
+  "_where": "",
+  "bin": {
+    "zhuan-react-native": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "minimist": "^1.2.0",
+    "prompt": "^0.2.14",
+    "semver": "^5.0.3"
+  },
+  "description": "The React Native CLI tools",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "key": "@zz-app_react-native-cli_-_@zz-app_react-native-cli-2.0.11.tgz",
+    "shasum": "e912e097524952d000a096bd0f53f87cf4aab3c3",
+    "size": 6126,
+    "tarball": "http://zzfe.rcnpm.58corp.com/@zz-app/react-native-cli/download/@zz-app/react-native-cli-2.0.11.tgz"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "homepage": "https://github.com/facebook/react-native#readme",
+  "license": "BSD-3-Clause",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "lishoulong@58ganji.com",
+      "name": "lishoulong"
+    }
+  ],
+  "name": "@zz-app/react-native-cli",
+  "optionalDependencies": {},
+  "publish_time": 1499767885783,
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "2.0.11"
+}
