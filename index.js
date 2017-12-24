@@ -242,15 +242,11 @@ function createProject(name, options) {
     private: true,
     scripts: {
       start: "node node_modules/react-native/local-cli/cli.js start",
-      iosbundle: "zhuan-react-native bundle --platform ios --dev false --entry-file index.ios.js --bundle-output ./output/ios/" + projectName + "." + timeStamp + ".ios.bundle",
-      androidbundle: "zhuan-react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./output/android/" + projectName + "." + timeStamp + ".android.bundle",
-      androidsplitbundle:"npm run baseAndroidbundle && npm run businessAndroidbundle",
-      iossplitbundle:"npm run baseIosbundle && npm run businessIosbundle",
-      baseAndroidbundle: "zhuan-react-native bundle --platform android --entry-file ./base.android.js --bundle-output ./output/android/" + "base." + baseVersion + ".android.bundle --manifest-output ./output/android/base.android.manifest.json",
-      businessAndroidbundle: "zhuan-react-native bundle --entry-file ./index.android.js --platform android --bundle-output ./output/android/" + projectName + "." + timeStamp + ".android.bundle --manifest-file ./output/android/base.android.manifest.json",
-      baseIosbundle: "zhuan-react-native bundle --platform ios --entry-file ./base.ios.js --bundle-output ./output/ios/" + "base." + baseVersion + ".ios.bundle --manifest-output ./output/ios/base.ios.manifest.json",
-      businessIosbundle: "zhuan-react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ./output/ios/" + projectName + "." + timeStamp + ".ios.bundle --manifest-file ./output/ios/base.ios.manifest.json",
       test: "jest",
+      androidBundle: "zhuan-react-native bundle --platform android --dev true --entry-file index.js --bundle-output ./output/android/index.android.bundle",
+      androidSplit: "node ./build.js --platform android --output dist --config .splitconfig --dev false --rnVersion 0.50.3",
+      iosBundle: "zhuan-react-native bundle --platform ios --dev true --entry-file index.js --bundle-output ./output/ios/index.ios.bundle",
+      iosSplit: "node ./build.js --platform ios --output dist --config .splitconfig --dev false --rnVersion 0.50.3",
       webDev: "node web/start-dev-server",
       webBundle: "NODE_ENV=production webpack --config web/webpack.config.js --colors"
     }
@@ -333,9 +329,9 @@ function checkNodeVersion() {
 function printVersionsAndExit(reactNativePackageJsonPath) {
   console.log('@zz-app/react-native-cli: ' + require('./package.json').version);
   try {
-    console.log('react-native: ' + require(reactNativePackageJsonPath).version);
+    console.log('zhuan-react-native: ' + require(reactNativePackageJsonPath).version);
   } catch (e) {
-    console.log('react-native: n/a - not inside a React Native project directory');
+    console.log('zhuan-react-native: n/a - not inside a React Native project directory');
   }
   process.exit();
 }
